@@ -1,0 +1,679 @@
+body {
+	font-style: sans-serif;
+	margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+	margin: 0;
+}
+
+button {
+	background-color: white;
+	color: #515769;
+	padding: 10px 20px 10px 20px;
+	border: none;
+	outline: none;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+button:hover {
+	background-color: #17bed2;
+	color: white;
+	transition: .3s;
+}
+
+.promo-button {
+	padding-top: 20px;
+	padding-right: 30px;
+	padding-bottom: 20px;
+	padding-left: 30px;
+	font-weight: 700;
+}
+
+a:hover{
+	color: white;
+}
+
+.header {
+	border-bottom: solid 1px;
+	border-color: rgba(255,255,255,.2);
+	background-color: rgba(0,0,0,.5);
+}
+
+.navbar {
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+.navbar-toggler {
+	background-color: inherit;
+}
+
+.navbar-toggler-icon {
+	display: inline-block;
+	height: 1px;
+	width: 20px;
+	background-color: white;
+	position: relative;
+	top: 2px;
+}
+
+.navbar-toggler-icon::before,.navbar-toggler-icon::after {
+	content: "";
+	display: inline-block;
+	height: 1px;
+	
+	background-color: white;
+	position: absolute;
+	left: 0;
+}
+
+.navbar-toggler-icon::after {
+	bottom: 5px;
+	width: 15px;
+}
+
+.navbar-toggler-icon::before{
+	bottom: 10px;
+	width: 10px;
+}
+
+.navbar-toggler:hover .navbar-toggler-icon::after,.navbar-toggler:hover  .navbar-toggler-icon::before,.navbar-toggler:hover  .navbar-toggler-icon {
+	width: 20px;
+	transition: .5s;
+	background-color: #17bed2;
+}
+
+.navbar-toggler:hover{
+	background-color: inherit;
+}
+
+.navbar-toggler:active,.navbar-toggler:focus {
+	outline: none;
+}
+
+.nav-link {
+	line-height: 55px;
+	color: white;
+	font-weight: 700;
+}
+
+.nav-link:before {
+	content: "";
+	display: inline-block;
+	opacity: 0;
+	vertical-align: middle;
+	margin-right: 10px;
+	height: 2px;
+	width: 8px;
+	background-color: #17bed2;
+	transition: .5s;
+}
+
+.nav-link:hover:before {
+	opacity: 1;
+}
+
+.nav-list {
+	margin-left: auto;
+}
+
+.promo-block {
+	background-image: url(img/1920x1080/01.jpg);
+	background-size: cover;
+	background-position: center; 
+	padding-top: 250px;
+	padding-bottom: 200px;
+	color: white;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+}
+
+.promo-block:before {
+	content: "";
+	display: block;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(81,87,105,.4);
+	margin-top: -250px;
+	z-index: -1;
+}
+
+.promo-heading {
+	font-size: 70px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+.promo-text {
+	font-size: 25px;
+	margin-bottom: 30px;
+}
+
+.container-heading {
+	text-align: center;
+	padding-top: 100px;
+	padding-bottom: 40px;
+	max-width: 600px;
+	margin: auto;
+}
+
+.products-heading {
+	font-weight: 700;
+	margin-bottom: 15px;
+	font-size: 30px;
+	color: #515769;;
+}
+
+.products-link {
+	color: #515769;
+	font-weight: 700;
+	font-size: 22px;
+	margin-right: 20px;
+	 /*Почему-то не работает */
+}
+
+/*Странно то, что в оригинале хавера нет, но цвет ссылки при наведении курсора чуть-чуть меняется.*/
+.products-link:hover {
+	color: #999caa;
+	text-decoration: none; 
+}
+
+.span-col {
+	color: #bfc1c7;
+	font-size: 14px;
+}
+
+.products-block-text {
+	color: #a6a7aa;
+	font-size: 15px;
+}
+
+.products-text {
+	font-size: 15px;
+	color: #a6a7aa;
+	margin-bottom: 15px;
+}
+
+.products-link-second {
+	font-weight: 600;
+	color: #81848f;
+	font-size: 13px;
+	text-transform: uppercase;
+}
+
+.products-link-second:after {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	height: 2px;
+	width: 8px;
+	background-color: #17bed2;
+	margin-left: 5px;
+}
+
+.products-link-second:hover {
+	color: #999caa;
+	text-decoration: none;
+}
+
+.prod {
+	padding-bottom: 100px;
+}
+
+.service-box {
+	max-width: 100%;
+	background-color: white; 
+	padding: 50px;
+	margin: 2.5px;
+	box-sizing: border-box;
+	transition: .5s;
+}
+.service-box *{
+	transition: .5s;
+}
+
+.service {
+	background-color: #f9f9f9;
+	padding: 100px 0 100px 0;
+}
+
+.service-box:hover  > i.fa {
+	transform: translateY(-20px);
+	opacity: 0;
+	transition: .5s;
+}
+
+.service-box:hover  >  .serive-heading {
+	transform: translateY(-20px);
+	transition: .5s;
+}
+ .service-box:hover > .service-text{
+ 	transform: translateY(-20px);
+	transition: .5s;
+ }
+.service-active {
+	background-color: #17bed2;
+}
+
+.service-active .fa-tablet {
+	color: white;
+}
+
+.service-active .serive-heading {
+	color: white;
+	font-weight: 700;
+	margin-bottom: 15px;
+}
+
+.service-active .service-text {
+	margin-bottom: 5px;
+	color: white;
+}
+
+i.fa {
+	font-size: 30px;
+	color: #999caa;
+	margin-bottom: 30px;
+}
+
+.serive-heading {
+	margin-bottom: 15px;
+	font-weight: 700;
+	color: #515769;
+}
+
+.service-text{
+	margin-bottom: 5px;
+	color: #bab5ab;
+}
+
+/* Банер паралакс */
+
+.promo-banner {
+  position: relative;
+  z-index: 1;
+  background: url(img/1920x1080/02.jpg) center center no-repeat fixed;
+  background-size: auto;
+  background-size: cover;
+  min-height: 100%;
+  text-align: center;
+}
+
+.banner-darker {
+	background-color: rgba(81,87,105,.4);
+}
+
+.promo-banner-title {
+	color: white;
+	padding-top: 100px;
+	padding-bottom: 30px;
+	font-weight: 700;
+	font-size: 50px;
+}
+
+.promo-banner-text {
+	color: white;
+	padding-bottom: 100px;
+/*	margin-left: 470px;
+	margin-right: 470px;*/
+	font-size: 20px;
+}
+
+/* /Банер паралакс */
+
+/* Коллаж */
+
+#wrk {
+	height: 670px;
+	/*width: 1207px; */
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.container-collage {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.collage {
+	margin: 2.5px;
+	position: relative;
+}
+
+.collage:before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: rgba(0,0,0,.5);
+	opacity: 0;
+	transition: .5s;
+}
+
+.collage:hover:before {
+	opacity: 1;
+} /*не работает*/ 
+
+/* /Коллаж */
+
+/* kits */ 
+
+#kits-main {
+/*	display: flex;
+	justify-content: center;
+	width: 100%;	*/
+	background-color: #f9f9f9;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.kits-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+
+	/*padding: 100px;
+}
+.kits-row {
+	/*min-width: 1160px;*/
+	/*margin-left: 500px;*/
+}
+
+.kits {
+	display: flex;
+	flex-direction: column;
+	margin: 2px;
+	background-color: white;
+	/*max-width: 380px;*/
+	height: 520px;
+	padding-top: 70px;
+	padding-right: 45px;
+	padding-bottom: 70px;
+	padding-left: 45px;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.kits-long {
+	height: 620px;
+}
+
+.kits-titles {
+	font-size: 22px;
+	font-weight: 700;
+	color: #515769;
+	padding-bottom: 15px;
+}
+
+.kits-span {
+	font-size: 14px;
+	color: #bfc1c7;
+	font-weight: 600;
+}
+
+.kits-text {
+	font-size: 15px;
+	font-weight: 400;
+	color: #a6a7aa;
+	margin-bottom: 15px;
+}
+
+.kits-list-main {
+	padding-top: 15px;
+	padding-right: 0;
+	padding-left: 0;
+	padding-bottom: 25px;
+}
+
+.kits-list {
+	list-style-type: none;
+	color: #81848f;
+	font-size: 13px;
+	font-weight: 600;
+	padding-bottom: 7px;
+}
+
+.kits-list:before {
+	content: "";
+	display: inline-block;
+	opacity: 1;
+	vertical-align: middle;
+	margin-right: 10px;
+	height: 2px;
+	width: 8px;
+	background-color: #17bed2;
+}
+
+.kits-button {
+	background-color: #f3f4f5;
+	padding-top: 15px;
+	padding-right: 40px;
+	padding-bottom: 15px;
+	padding-left: 40px;
+	font-size: 13px;
+	font-weight: 600;
+	font-family: Hind,sans-serif
+}
+
+/* old slider */
+
+/*.slider * {
+	width: 970px;
+	height: 270px; задокументировать
+	overflow: hidden; задокументировать
+	border: 1px solid;
+}
+
+.navigation {
+	display: flex;
+}
+.viport{
+	width: 3900px;
+	height: 370px;
+	overflow: hidden;
+	border: 1px solid;
+	white-space: nowrap;
+	display: flex;	
+	transition: 5s;
+}
+.bar {
+	height: 8px;
+	width: 30px;
+	margin: 6px;
+	background-color: #d7d7db;
+	border-radius: 10px;
+	transition: all .4s ease;
+	z-index: 1;
+}
+
+.bar:active {
+	background-color: #17bed2;
+	transform: scale(1.1);
+}
+
+.slider-radio[name="r"] {
+	visibility: hidden;
+}
+
+.slides,.slide * {
+	width: 970px;
+	height: 270px;
+	border:solid red; задокументировать
+	z-index: 0;
+	display: inline-block;
+}
+
+.slider {
+	width: 970px;
+	margin: auto;
+	margin-left: 20%;
+	padding-bottom: 80px;
+	padding-top: 80px;
+	overflow:hidden;
+}
+
+.slider-title {
+	color: #515769;
+	font-weight: 700;
+	padding-bottom: 25px;
+}
+
+.slider-text {
+	color: #a6a7aa;
+	padding-bottom: 25px;
+	padding-left: 50px;
+	font-size: 17px;
+}
+
+.slider-span {
+	color: #515769;
+	font-weight: 600;
+}
+.viport:active{
+
+	transform: translateX(calc(-100% + 970px));
+}*/
+
+
+
+/* new slider */
+
+.slider-main {
+	display: flex;
+	align-items: center;
+	/*padding-left: 300px;*/
+	padding-bottom: 100px;
+	padding-top: 100px;
+	/*width: 1200px;*/
+	/*height: 500px;*/
+	position: relative;
+}
+
+.carousel-inner {
+	padding: 10px;
+}
+
+.carousel-item {
+	padding-left: 40px;
+}
+
+.slider-header {
+	color: #515769;
+	font-size: 30px;
+	font-weight: 700;
+	margin-bottom: 15px;
+	line-height: 1.4;
+}
+
+p.d-block {
+	color: #a6a7aa;
+	font-size: 17px;
+	font-weight: 600;
+	font-family: sans-serif;
+}
+
+.carousel-span {
+	font-weight: 700;
+	color: #81848f !important;
+}
+
+.carousel-control-next {
+	width: 100%;
+	height: 100%;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+	/*width: 100%;
+	height: 100%;*/
+	background-color: rgba(0,0,0,.0);
+}
+
+.slider-main>.container-fluid {
+/*	height: 200px;
+	width: 850px;*/
+	/*margin-bottom: 100px;*/
+}
+
+/*map*/
+
+#map {
+	width: 100%;
+	height: 400px;
+}
+
+.map-text {
+	text-align: center;
+	padding: 25px;
+	color: #515769;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+/* контакты */
+
+.contacts-container-main {
+	border: 1px solid lightgrey;
+}
+
+.contacts-container {
+	display: flex;
+	flex-direction: row;
+	width: 60%;
+	height: 250px;
+	margin: auto;
+	padding-top: 45px;
+}
+
+.contacts-col {
+	display: flex;
+	flex-direction: column;
+	width: 220px;
+	/*padding-right: 100px;*/
+}
+
+.contacts-link {
+	color: #515769;
+	font-size: 16px;
+	font-weight: 600;
+	padding-bottom: 10px;
+}
+
+.contacts-link:hover {
+	color: #81848f;
+	text-decoration: none;
+}
+
+/* footer */
+
+footer {
+	display: flex;
+	justify-content: space-around;
+	padding: 50px;
+}
+
+.footer-img {
+	height: 20px;
+	width: 100px;
+}
+
+.footer-text {
+	color: #81848f;
+}
+
+.footer-link {
+	color: #737373;
+	font-weight: 700;
+}
+
+.footer-link:hover {
+	color: #81848f;
+	text-decoration: none;
+}
