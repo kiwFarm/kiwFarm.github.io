@@ -3,38 +3,107 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="bootstrap-4.4.1-dist\css\bootstrap.css">
-	<link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="font-awesome-4.7.0\css\all.css">
+	<!-- <link rel="stylesheet" type="text/css" href="slider.css"> -->
 </head>
 <body>
 
 	<header>
-	<div class="cnv-container">
+	<div id="start" class="cnv-container container-fluid">
 		<canvas class="canvas"></canvas>
-		<div class="cnv-all">
+		<div class="cnv-all row">
 			<h1 class="cnv-txt">Hello, I'm <span class="name"><a href="#" class="name-link">George Krylov</a></span>. <br>I'm a web developer.</h1>
-			<div class="btn-container">
-				<a class="link-promo" href="#">About me</a>
-				<a class="link-promo" href="#">View my work</a>
-				<a class="link-promo" href="#">Contacts</a>
+			<div class="btn-container row col-md-4">
+				<a class="link-promo col-md-4" href="#">About me</a>
+				<a class="link-promo col-md-4" href="#">View my work</a>
+				<a class="link-promo col-md-4" href="#">Contacts</a>
 			</div>
 		</div>
 	</div>
 	</header>
 
+	
 
-	<!-- <div class="header">
-		<div class="head-link-container">
-			<a href="#" class="head-links">About me</a>
-			<a href="#" class="head-links">View my work</a>
-			<a href="#" class="head-links">Contacts</a>
-		</div>
-	</div> -->
+	<div class="wrapper">
+                
+
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+    	<button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fas fa-align-left"></i>
+                    <span></span>
+                </button>
+        <div id="dismiss">
+
+            <i class="fa fa-plus"></i>
+        </div>
+
+        <div class="sidebar-header">
+            <h3>George Krylov</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li class="active bar-link-container">
+                <a href="#start" data-toggle="collapse" aria-expanded="false">Hello!</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li class="bar-link-container">
+                        <a class="bar-link" href="#">Home 1</a>
+                    </li>
+                    <li class="bar-link-container">
+                        <a class="bar-link" href="#">Home 2</a>
+                    </li>
+                    <li class="bar-link-container">
+                        <a class="bar-link" href="#">Home 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="bar-link-container">
+            	<li class="bar-link-container">
+                <a href="#one-page">About me</a>
+              </li>
+              <li class="bar-link-container">
+                <a href="#two-page" data-toggle="collapse" aria-expanded="false">My works</a>
+              </li>
+            </li>
+            <li class="bar-link-container">
+                <a class="bar-link" href="#three-page">Contact</a>
+            </li>
+        </ul>
+
+        <ul class="list-unstyled components">
+            <li class="bar-link-container">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">GitHub</a>
+            </li>
+            <li class="bar-link-container">
+                <a href="#">Telegram</a>
+            </li>
+            <li class="bar-link-container">
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Skype</a>
+            </li>
+            <li class="bar-link-container">
+                <a class="bar-link" href="#">VK</a>
+            </li>
+            <li class="bar-link-container">
+                <a class="bar-link" href="#">Email</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Page Content  -->
+
+        
+
+
+    </div>
+</div>
+
+<div class="overlay"></div>
 
 
 
-	<main>
+	<main id="one-page" class="one-page">
 
 		<div class="container-fluid">
 			<div class="row justify-content-center mb-5">
@@ -43,39 +112,50 @@
 		
 			</div>
 		
-				<!-- <img src="https://sun9-32.userapi.com/c7004/v7004091/69fcf/HWp2X8_JvqI.jpg" alt="" class="photo"> -->
+				
 
-				<div class="row justify-content-around mb-5">
+				<div class="one-page row justify-content-around mb-5">
 					<div class="col-lg-3">
 						<img src="https://sun9-20.userapi.com/c849136/v849136401/15ca07/dQvYwdw5O80.jpg" alt="" class="photo img-fluid">
-
-						<p class="description">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus autem illum incidunt est pariatur fugiat enim ipsam nobis odio.
-						</p>
+						<!-- <img src="https://sun9-32.userapi.com/c7004/v7004091/69fcf/HWp2X8_JvqI.jpg" alt="" class="photo"> -->
+						<div class="description-container">
+							<p class="description">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus autem illum incidunt est pariatur fugiat enim ipsam nobis odio.
+							</p>
+						</div>
 					</div>
 					<div class="col-lg-5">
 					<div class="achievements-container">
-					<div class="achievement-load">
-						<div class="achievement T">HTML</div>Loading...
+					<div class="achievement-load"><span>80%</span>
+						<div class="achievement T">HTML</div>
+						<div class="load load-1"></div>
 					</div>
-					<div class="achievement-load">
-						<div class="achievement T">CSS</div>Loading...
+					<div class="achievement-load"><span>80%</span>
+						<div class="achievement T">CSS</div>
+						<div class="load load-2"></div>
 					</div>
-					<div class="achievement-load">
-						<div class="achievement T">Bootstrap</div>Loading...
+					<div class="achievement-load"><span>80%</span>
+						<div class="achievement T">Bootstrap</div>
+						<div class="load load-3"></div>
 					</div>
-					<div class="achievement-load">
-						<div class="achievement F">JavaScript</div>Loading...
+					<div class="achievement-load"><span>80%</span>
+						<div class="achievement F">JavaScript</div>
+						<div class="load load-4"></div>
 					</div>
-					<div class="achievement-load">
-						<div class="achievement F">jQuery</div>Loading...
+					<div class="achievement-load"><span>80%</span>
+						<div class="achievement F">jQuery</div>
+						<div class="load load-5"></div>
+					</div>
+					<div class="achievement-load"><span>80%</span>
+						<div class="achievement T">GitHub</div>
+						<div class="load load-6"></div>
 					</div>
 				</div>
 				</div>
 			</div>
 			</div>
 
-			<div class="container-fluid">
+			<!-- <div class="container-fluid pb-5 end-one-page">
 				<div class="row justify-content-around">
 					<div class="about-me-container col-md-4">
 							<h3 class="aboutMe">About me</h3>
@@ -85,11 +165,10 @@
 					</div>
 				</div>
 				<div class="row justify-content-around">
-					<div class="col-md-4">
+					<div class="col-md-4 desk-btn-container">
 						<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque rem culpa deleniti praesentium maxime voluptas quia, quibusdam autem ex odit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque rem culpa deleniti praesentium maxime voluptas quia, quibusdam autem ex odit.</p>
-
 						<div class="myWorks">
-							<button class="check-my-works">↓</button>
+							<button class="check-my-works">↓ View my work ↓</button>
 						</div>
 					</div>
 
@@ -127,7 +206,7 @@
 							</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
 
 			<!-- </div>
@@ -156,7 +235,154 @@
 
 	</main>
 
-	<script type="text/javascript" src="script.js"></script>
+
+	<div id="two-page" class="container-fluid two-page">
+		<div class="two-page-header-container">
+			<a href="#" class="two-page-header">My works</a>
+		</div>
+
+
+		<div class="slider">
+    <div class="slider__wrapper">
+      <div class="slider__item">
+        <div style="height: 400px;"><a href=""><img src="https://sun9-42.userapi.com/c857028/v857028090/16bb09/MWTeo3lXsoQ.jpg"></a></div>
+      </div>
+      <div class="slider__item">
+        <div style="height: 400px;"><a href=""><img src="https://sun9-52.userapi.com/c857736/v857736886/1e44be/Ooc2_4YUv4g.jpg"></a></div>
+      </div>
+      <div class="slider__item">
+        <div style="height: 400px;"><a href=""><img src="https://sun9-22.userapi.com/c857736/v857736886/1e44b4/hOeM3bwpc3Y.jpg"></a></div>
+      </div>
+      <!-- <div class="slider__item">
+        <div style="height: 400px;"><a href=""><img src="https://sun9-42.userapi.com/c857028/v857028090/16bb09/MWTeo3lXsoQ.jpg"></a></div>
+      </div> -->
+    </div>
+    <a class="slider__control slider__control_left" href="#" role="button"></a>
+    <a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
+  </div>
+
+		<!-- <div class="all">
+		<input checked type="radio" name="respond" id="desktop">
+			<article id="slider">
+					<input checked type="radio" name="slider" id="switch1">
+					<input type="radio" name="slider" id="switch2">
+					<input type="radio" name="slider" id="switch3">
+					<input type="radio" name="slider" id="switch4">
+					<input type="radio" name="slider" id="switch5">
+				<div id="slides">
+					<div id="overflow">
+						<div class="image">
+							<article class="slide"><a href="#" class="slider-link"><img src="https://sun9-42.userapi.com/c857028/v857028090/16bb09/MWTeo3lXsoQ.jpg"></a></article>
+							<article class="slide"><a href="#" class="slider-link"><img src="https://sun9-42.userapi.com/c857028/v857028090/16bb09/MWTeo3lXsoQ.jpg"></a></article>
+							<article class="slide"><a href="#" class="slider-link"><img src="https://sun9-42.userapi.com/c857028/v857028090/16bb09/MWTeo3lXsoQ.jpg"></a></article>
+							<article class="slide"><a href="#" class="slider-link"><img src="https://sun9-42.userapi.com/c857028/v857028090/16bb09/MWTeo3lXsoQ.jpg"></a></article>
+							<article class="slide"><a href="#" class="slider-link"><img src="https://sun9-42.userapi.com/c857028/v857028090/16bb09/MWTeo3lXsoQ.jpg"></a></article>
+						</div>
+					</div>
+				</div>
+				<div id="controls">
+					<label for="switch1"></label>
+					<label for="switch2"></label>
+					<label for="switch3"></label>
+					<label for="switch4"></label>
+					<label for="switch5"></label>
+				</div>
+				<div id="active">
+					<label for="switch1"></label>
+					<label for="switch2"></label>
+					<label for="switch3"></label>
+					<label for="switch4"></label>
+					<label for="switch5"></label>
+				</div>
+			</article>
+	</div> -->
+
+
+
+
+
+
+		<!-- <div class="work-container row">
+				<div class="work-block col-lg-2">
+					<a href="#" class="work-link">
+						<img src="https://sun9-42.userapi.com/c857028/v857028090/16bb09/MWTeo3lXsoQ.jpg" alt="" class="work-img">
+					</a>
+				</div>
+			<div class="work-block col-lg-2">
+				<a href="#" class="work-link">
+					<img src="https://sun9-42.userapi.com/c857028/v857028090/16bb09/MWTeo3lXsoQ.jpg" alt="" class="work-img">
+				</a>
+			</div>
+			<div class="work-block col-lg-2">
+				<a href="#" class="work-link">
+					<img src="https://sun9-42.userapi.com/c857028/v857028090/16bb09/MWTeo3lXsoQ.jpg" alt="" class="work-img">
+				</a>
+			</div>
+			<div class="work-block col-lg-2">
+				<a href="#" class="work-link">
+					<img src="https://sun9-42.userapi.com/c857028/v857028090/16bb09/MWTeo3lXsoQ.jpg" alt="" class="work-img">
+				</a>
+			</div>
+			<div class="work-block col-lg-2">
+				<a href="#" class="work-link">
+					<img src="https://sun9-42.userapi.com/c857028/v857028090/16bb09/MWTeo3lXsoQ.jpg" alt="" class="work-img">
+				</a>
+			</div>
+			<div class="work-block col-lg-2">
+				<a href="#" class="work-link">
+					<img src="https://sun9-42.userapi.com/c857028/v857028090/16bb09/MWTeo3lXsoQ.jpg" alt="" class="work-img">
+				</a>
+			</div>
+		</div> -->
+	</div>
+
+	<div id="three-page" class="three-page">
+		<svg
+          preserveAspectRatio="none"
+          viewBox="0 0 100 102"
+          height="75"
+          width="100%"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          class="svgcolor-light"
+        >
+          <path d="M0 0 L50 100 L100 0 Z" fill="#f5f5f5" stroke="#f5f5f5"></path>
+        </svg>
+
+		<div class="contact-container">
+			<div class="contact-header-container">
+				<h2 class="contact-header">CONTACT</h2>
+			</div>
+			<p class="contact-question">Have a question or want to work together?</p>
+				<form>
+					<input type="name" placeholder="Name" class="inp inp-name">
+					<input type="email" placeholder="Enter email" class="inp inp-mail">
+					<textarea placeholder="Your message" class="inp inp-message"></textarea>
+					<div class="inp-btn-container">
+						<button class="inp inp-submit" type="submit">SUBMIT</button>
+						<button class="inp inp-reset" type="reset">RESET</button>
+					</div>
+				</form>
+		</div>
+	</div>
+
+
+
+	<footer class="footer">
+		<div class="my-contact-container">
+			<a href="#" class="my-contact">GitHub</a>
+			<a href="#" class="my-contact">Telegram</a>
+			<a href="#" class="my-contact">Skype</a>
+			<a href="#" class="my-contact">Email</a>
+		</div>
+		</footer>
+
+		<button style="position: fixed; bottom: 20px; right: 20px;" type="button" id="scrollUp" class="btn btn-up">UP</button>
+
 	<script type="text/javascript" src="jquery/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="slider.js"></script>
+	
 </body>
 </html>

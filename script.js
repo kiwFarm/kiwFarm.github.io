@@ -1,26 +1,26 @@
-// var space;
+// let space;
 
 // function floatySpace() {
-//   var colors = [
+//   let colors = [
 //     "#FF3F8E", "#04C2C9", "#2E55C1"
 //   ];
 
 
 //   space = new CanvasSpace("canvas", "#252934" ).display();
-//   var form = new Form( space );
+//   let form = new Form( space );
 
 //   // Elements
-//   var pts = [];
-//   var center = space.size.$divide(1.8);
-//   var angle = -(window.innerWidth * 0.5);
-//   var count = window.innerWidth * 0.05;
+//   let pts = [];
+//   let center = space.size.$divide(1.8);
+//   let angle = -(window.innerWidth * 0.5);
+//   let count = window.innerWidth * 0.05;
 //   if (count > 150) count = 150;
-//   var line = new Line(0, angle).to(space.size.x, 0);
-//   var mouse = center.clone();
+//   let line = new Line(0, angle).to(space.size.x, 0);
+//   let mouse = center.clone();
 
-//   var r = Math.min(space.size.x, space.size.y) * 1;
-//   for (var i=0; i<count; i++) {
-//     var p = new Vector( Math.random()*r-Math.random()*r, Math.random()*r-Math.random()*r );
+//   let r = Math.min(space.size.x, space.size.y) * 1;
+//   for (let i=0; i<count; i++) {
+//     let p = new Vector( Math.random()*r-Math.random()*r, Math.random()*r-Math.random()*r );
 //     p.moveBy( center ).rotate2D( i*Math.PI/count, center);
 //     p.brightness = 0.1
 //     pts.push( p );
@@ -30,19 +30,19 @@
 //   space.add({
 //     animate: function(time, fps, context) {
 
-//       for (var i=0; i<pts.length; i++) {
+//       for (let i=0; i<pts.length; i++) {
 //         // rotate the points slowly
-//         var pt = pts[i];
+//         let pt = pts[i];
 
 //         pt.rotate2D( Const.one_degree / 20, center);
 //         form.stroke( false ).fill( colors[i % 3] ).point(pt, 1);
 
 //         // get line from pt to the mouse line
-//         var ln = new Line( pt ).to( line.getPerpendicularFromPoint(pt));
+//         let ln = new Line( pt ).to( line.getPerpendicularFromPoint(pt));
 
 //         // opacity of line derived from distance to the line
-//         var opacity = Math.min( 0.8, 1 - Math.abs( line.getDistanceFromPoint(pt)) / r);
-//         var distFromMouse = Math.abs(ln.getDistanceFromPoint(mouse))
+//         let opacity = Math.min( 0.8, 1 - Math.abs( line.getDistanceFromPoint(pt)) / r);
+//         let distFromMouse = Math.abs(ln.getDistanceFromPoint(mouse))
 
 //         if (distFromMouse < 50) {
 //           if (pts[i].brightness < 0.3) pts[i].brightness += 0.015
@@ -50,7 +50,7 @@
 //           if (pts[i].brightness > 0.1) pts[i].brightness -= 0.01
 //         }
 
-//         var color = "rgba(255,255,255," + pts[i].brightness +")"
+//         let color = "rgba(255,255,255," + pts[i].brightness +")"
 //         form.stroke(color).fill( true ).line(ln);
 //       }
 //     },
@@ -388,7 +388,7 @@
 
 (function(){
 
-    var canvas = document.querySelector('canvas'),
+    let canvas = document.querySelector('canvas'),
     ctx = canvas.getContext('2d'),
     w = canvas.width = innerWidth,
     h = canvas.height = innerHeight,
@@ -449,9 +449,9 @@
     }
 
     function drawLines(){
-        var x1, y1, x2, y2, length, opacity;
-        for(var i in particles){
-            for(var j in particles){
+        let x1, y1, x2, y2, length, opacity;
+        for(let i in particles){
+            for(let j in particles){
                 x1 = particles[i].x;
                 y1 = particles[i].y;
                 x2 = particles[j].x;
@@ -472,7 +472,7 @@
     }
 
     function reDrawParticles(){
-        for(var i in particles){
+        for(let i in particles){
             particles[i].reCalculateLife();
             particles[i].position();
             particles[i].reDraw();
@@ -487,7 +487,7 @@
     }
 
     function init(){
-        for(var i = 0 ; i < properties.particleCount ; i++){
+        for(let i = 0 ; i < properties.particleCount ; i++){
             particles.push(new Particle);
         }
         loop();
@@ -496,3 +496,65 @@
     init();
 
 }())
+
+
+
+
+
+
+
+$(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#dismiss, .overlay').on('click', function () {
+                $('#sidebar').removeClass('active');
+                $('.overlay').removeClass('active');
+                // $('#sidebarCollapse').animate({"left":"400", "opacity":"1"}, 1000);
+                $('#sidebarCollapse').show();
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').addClass('active');
+                $('.overlay').addClass('active');
+                $('.collapse.in').toggleClass('in');
+                // $('#sidebarCollapse').animate({"right":"400px", "opacity":"0"}, 1000);
+                $('#sidebarCollapse').hide();
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+
+
+
+$(".btn-up").click(function(){
+        $("html, body").scrollTop(0);
+    });
+
+
+
+// $(".two-page").getBoundingClientRect().top();
+// $(window).scroll(function(){
+//     if ($(".two-page").getBoundingClientRect().top()<=0) {
+//         $("#scrollUp", "sidebarCollapse").show();
+//     } else {
+//         $("#scrollUp", "sidebarCollapse").hide();
+//     }
+// })
+
+
+$("#sidebarCollapse").hide();
+        $("#scrollUp").hide();
+$(window).scroll(function(){
+    let bb = $(window).scrollTop();
+    let dd = $("#one-page").offset().top;
+    if (bb>=dd) {
+        $("#scrollUp").show();
+        $("#sidebarCollapse").show();
+    } else {
+        $("#sidebarCollapse").hide();
+        $("#scrollUp").hide();
+    }
+    console.log(bb, dd);
+})
+
